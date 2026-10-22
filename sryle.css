@@ -1,0 +1,83 @@
+:root {
+    --cor-fundo: #01080E;
+    --cor-principal: #0B0D20;
+    --cor-secundaria: #212333;
+    --cor-destaque: #2BDEFD;
+    --cor-texto: #D7F9FF;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--cor-secundaria);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Gerenciamento de telas e fluxo do Jogo */
+.caixa-perguntas,
+.caixa-alternativas,
+.caixa-resultado {
+    display: none; /* Oculta os elementos por padrão */
+    margin-top: 20px;
+}
+
+/* Classe aplicada via JavaScript para exibir os elementos na tela */
+.caixa-perguntas.mostrar,
+.caixa-alternativas.mostrar,
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-alternativas button {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+/* Estilização Geral dos Botões */
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.98);
+}
